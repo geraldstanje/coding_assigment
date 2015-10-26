@@ -32,10 +32,14 @@ Insertion in the trie as well as lookup will be with lowercase.
 
 There are two options to build the trie:
 
-1. read the keywords from a file
-2. read the keywords via command line argument
+1. read the keywords (bag of words) from a file
+2. read the keywords (bag of words) via command line argument
 
-The keyword matcher returns a vector with one's and zero's. A one at index x means the a keyword within the bag of words was found.
+After the trie is built, the output vector is allocated. 
+
+The function keyword_matcher::match_keywords would take a url string and return a vector with one's and zero's. 
+A one at index x means the a keyword within the bag of words was found.
+The function match_keywords only initializes the output vector to zero, rather than allocating it.
 
 Example: <br>
 trie with 3 words = he,hel,hi <br>
