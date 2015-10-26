@@ -51,7 +51,7 @@ Index 0...he <br>
 Index 1...hel <br>
 Index 2...hi <br>
 
-The trie reads each character from the input string exactly once:
+The trie reads each character from the input string exactly once: <br>
 current trie node: h <br>
 current trie node: t <br>
 current trie node: t <br>
