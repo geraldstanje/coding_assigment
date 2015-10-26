@@ -22,7 +22,7 @@ Keywords can look like:
 Before an ad auction happens, there is a "data provider" stage where additional information on the auction 
 can be added. As the overall auction is ~150ms, we only have ~10ms to add in this suplemental data to the auction.
 
-Buyers can then target this "has a keyword" segment and make campaigns that only target URLs with ertain word.s
+Buyers can then target this "has a keyword" segment and make campaigns that only target URLs with ertain words.
 
 # Design
 All keywords are stored in a trie, with key = keyword, value = index to the bag of words vector
