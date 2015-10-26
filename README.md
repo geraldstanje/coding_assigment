@@ -38,7 +38,7 @@ There are two options to build the trie:
 The keyword matcher returns a vector with one's and zero's. A one at index x means the a keyword within the bag of words was found.
 
 Example:
-trie = he,hel,hi <br>
+trie with 3 words = he,hel,hi <br>
 url = http://hello.com
 
 Output:
