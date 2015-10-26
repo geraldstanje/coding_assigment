@@ -50,6 +50,7 @@ int main(int argc, char *argv[]) {
     argument_parser a;
     a.parse(allArgs);
     if (!a.parse_success()) {
+        std::cerr << "usage: "<< allArgs[0] << " [-u URL] [-s bag of words string] [-f bag_of_words_file]\n";
         return -1;
     }
 
