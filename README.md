@@ -35,7 +35,7 @@ There are two options to build the trie:
 1. read the keywords (bag of words) from a file
 2. read the keywords (bag of words) via command line argument
 
-After the trie is built, the output vector is allocated. 
+After the trie is built, the output vector is allocated within keyword_matcher::load_bag_of_words. 
 
 The function keyword_matcher::match_keywords would take a url string and return a vector with the size of the 
 bag of words, storing one's and zero's only. A one at index x means the a keyword within the bag of words was found.
