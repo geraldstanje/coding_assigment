@@ -40,7 +40,7 @@ After the trie is built, the output vector is allocated.
 The function keyword_matcher::match_keywords would take a url string and return a vector with the size of the 
 bag of words, storing one's and zero's only. A one at index x means the a keyword within the bag of words was found.
 The function match_keywords only initializes the output vector to zero, rather than allocating it. <br>
-For performance reason the type of the output vector is std::vector< uint16_t>, rather than
+For performance reason the type of the output vector was specified with std::vector< uint16_t>, rather than
 a vector< bool>. If the size of the bag of words would be const, a bitset could be selected. A bitset<32> could
 also be stored in 4 bytes memory. <br>
 
