@@ -9,6 +9,10 @@ class keyword_matcher {
   private:
     uint16_t bag_of_words_size_;
     trie trie_; // stores the keyword as a key + index as a value, the index refers to the bag_of_words vector index
+    std::vector<uint16_t> output;
+
+  private:
+    void set_output_zero();
 
   public:
     keyword_matcher();
