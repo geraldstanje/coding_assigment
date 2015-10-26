@@ -35,7 +35,7 @@ There are two options to build the trie:
 1. read the keywords from a file
 2. read the keywords via command line argument
 
-The keyword search returns a vector, which indicates that the keyword was found, if the value is 1
+The keyword matcher returns a vector, with ones and zeros. A one at index x means the a keyword within the bag of words was found.
 
 Example:
 trie = he,hel,hi <br>
