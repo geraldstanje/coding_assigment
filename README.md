@@ -87,6 +87,6 @@ The following command runs a valgrind check, to detect memroy leaks and starts a
 $ python compile_and_test.py
 
 # TODO:
-  * compress the trie by implemting a Suffix Trie
+  * compress the trie by implementing a Suffix Trie
   * yet another idea could be to implement a Ternary Search Tree: http://c.learncodethehardway.org/book/ex47.html
   * add more testing
