@@ -32,7 +32,7 @@ class argument_parser {
     bool parse_success() {
         if (url_.empty()) {
             return false;
-        } else if (bag_of_words_path_.empty() || bag_of_words_.empty()) {
+        } else if (bag_of_words_path_.empty() && bag_of_words_.empty()) {
             return false;
         }
         return true;
