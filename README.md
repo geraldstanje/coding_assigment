@@ -89,3 +89,4 @@ $ python compile_and_test.py
 # TODO:
   * compress the trie by implemting a Suffix Trie
   * yet another idea could be to implement a Ternary Search Tree: http://c.learncodethehardway.org/book/ex47.html
+  * add more testing
