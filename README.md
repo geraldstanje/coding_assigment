@@ -33,7 +33,7 @@ Insertion in the trie as well as lookup will be with lowercase.
 There are two options to build the trie:
 
 1. read the keywords from a file
-2. read the ketwords via command line argument
+2. read the keywords via command line argument
 
 The keyword search returns a vector, which indicates that the keyword was found, if the value is 1
 
