@@ -24,6 +24,7 @@ bool compare(const std::vector<uint16_t> &vec1, const std::vector<uint16_t> &vec
 
     return true;
 }
+
 int main() {
     // unit test for trie
     trie t;
