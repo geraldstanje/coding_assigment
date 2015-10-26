@@ -77,7 +77,7 @@ current trie node: o <br>
 current trie node: m <br>
 
 # Usage of the App
-./main [-u URL] [-t test] [-s bag of words string] [-f bag_of_words_file]
+./main [-u URL] [-s bag of words string] [-f bag_of_words_file]
 
 Command line arguments:
   * -u ... takes the url string, e.g. -u http://hello.com
