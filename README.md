@@ -80,7 +80,6 @@ current trie node: m <br>
 ./main [-u URL] [-t test] [-s bag of words string] [-f bag_of_words_file]
 
 Command line arguments:
-  * -t ... runs a system test
   * -u ... takes the url string, e.g. -u http://hello.com
   * -f ... takes a path to the bag of words, e.g. -f dataset/vocab.nytimes.txt
   * -s ... takes the bag of words (comma-separated) as a string, e.g. -s he,hel,hi
