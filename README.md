@@ -27,7 +27,7 @@ Buyers can then target this "has a keyword" segment and make campaigns that only
 # Design
 All keywords are stored in a trie, with key = keyword, value = index to the bag of words vector
 
-The trie stores 28 characters: a-z and the following special characters: '-' '_' at the moment.
+The trie stores 28 characters: a-z and the following special characters: '-' '_'.
 Insertion in the trie as well as lookup will be with lowercase.
 
 There are two options to build the trie:
