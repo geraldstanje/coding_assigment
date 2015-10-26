@@ -23,7 +23,7 @@ bool keyword_matcher::load_bag_of_words(const std::string &filename) {
         bag_of_words_size_++;
     }
 
-    output.resize(bag_of_words_size_);
+    output_.resize(bag_of_words_size_);
 
     // close file
     file.close();
@@ -41,7 +41,7 @@ void keyword_matcher::load_bag_of_words(const std::vector<std::string> &bag_of_w
         bag_of_words_size_++;
     }
 
-    output.resize(bag_of_words_size_);
+    output_.resize(bag_of_words_size_);
 }
 
 void keyword_matcher::set_output_zero() {
