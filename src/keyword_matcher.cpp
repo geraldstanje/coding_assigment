@@ -45,7 +45,7 @@ void keyword_matcher::load_bag_of_words(const std::vector<std::string> &bag_of_w
 }
 
 void keyword_matcher::set_output_zero() {
-    output.assign(bag_of_words_size_, 0);
+    output_.assign(bag_of_words_size_, 0);
 }
 
 std::vector<uint16_t> keyword_matcher::match_keywords(const std::string &url) {
@@ -67,7 +67,7 @@ std::vector<uint16_t> keyword_matcher::match_keywords(const std::string &url) {
 
             key_exists = trie_.exists_key_store_iter(url.begin() + start + offset, url.begin() + start + len, index);
             if (key_exists && index != -1) {
-                output[index] = 1;
+                output_[index] = 1;
             }
 
             if (!key_exists) {
@@ -84,5 +84,5 @@ std::vector<uint16_t> keyword_matcher::match_keywords(const std::string &url) {
     std::cerr << std::chrono::duration <double, std::milli> (diff).count() << '\n';
 #endif
 
-    return output;
+    return output_;
 }
