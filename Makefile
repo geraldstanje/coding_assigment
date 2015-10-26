@@ -21,9 +21,9 @@ executable: $(OBJS)
 	@echo "Build executable..."
 	$(CXX) $(OBJS) -o main $(LFLAGS)
 	
-benchmark: $(OBJS)
+benchmark: $(OBJS_TEST)
 	@echo "Build bench..."
-	$(CXX) $(OBJS) -o main $(LFLAGS)
+	$(CXX) $(OBJS_TEST) -o main $(LFLAGS)
 
 util.o: $(INCDIR)/util.h
 	$(CXX) $(CXXFLAGS) -I$(INCDIR) $(SRCDIR)/util.cpp

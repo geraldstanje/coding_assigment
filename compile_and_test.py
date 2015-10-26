@@ -18,7 +18,7 @@ def main():
   run_sub_process(['make', 'BUILD=test'])
 
   # run unit test to check for memory leaks
-  stdout_res, stderr_res = run_sub_process(['valgrind', '--tool=memcheck', '--leak-check=full', './main', '-t'])
+  stdout_res, stderr_res = run_sub_process(['valgrind', '--tool=memcheck', '--leak-check=full', './main'])
 
   if stderr_res.find("ERROR SUMMARY: 0 errors") == -1:
     print "valigrind check...failed"
@@ -30,7 +30,7 @@ def main():
   run_sub_process(['make', 'BUILD=benchmark'])
 
   # run benchmark to benchmark the app
-  stdout_res, stderr_res = run_sub_process(['./main', '-t'])
+  stdout_res, stderr_res = run_sub_process(['./main'])
   
   print "benchmark in ms:\n" + stderr_res
 

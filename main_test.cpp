@@ -68,5 +68,12 @@ int main() {
     vec = m.match_keywords("http://hellobello.com");
     assert(compare(vec, std::vector<uint16_t> {1,1,0,1}) == true);
 
+    // unit test for bag of words from file
+    if (!m.load_bag_of_words("dataset/vocab.nytimes.txt")) {
+        return -1;
+    }
+
+    auto vec2 = m.match_keywords("http://hello.com");
+
     return 0;
 }
