@@ -12,20 +12,20 @@ class argument_parser {
     std::string url_;
     std::string bag_of_words_path_;
     std::vector<std::string> bag_of_words_;
-    bool bag_of_words_from_file;
-    bool bag_of_words_from_cmd;
+    bool bag_of_words_from_file_;
+    bool bag_of_words_from_cmd_;
 
-    argument_parser(): bag_of_words_from_file(false), bag_of_words_from_cmd(false) {}
+    argument_parser(): bag_of_words_from_file_(false), bag_of_words_from_cmd_(false) {}
     void parse(std::vector<std::string> allArgs) {
         for (uint16_t i = 1; i < allArgs.size(); i++) {
             if (allArgs[i-1] == "-u") {
                 url_ = allArgs[i];
             } else if (allArgs[i-1] == "-f") {
                 bag_of_words_path_ = allArgs[i];
-                bag_of_words_from_file = true;
+                bag_of_words_from_file_ = true;
             } else if (allArgs[i-1] == "-s") {
                 split(allArgs[i].begin(), allArgs[i].end(), bag_of_words_);
-                bag_of_words_from_cmd = true;
+                bag_of_words_from_cmd_ = true;
             }
         }
     }
@@ -56,11 +56,11 @@ int main(int argc, char *argv[]) {
 
     keyword_matcher m;
 
-    if (a.bag_of_words_from_file) {
+    if (a.bag_of_words_from_file_) {
         if (!m.load_bag_of_words(a.bag_of_words_path_)) {
             return -1;
         }
-    } else if (a.bag_of_words_from_cmd) {
+    } else if (a.bag_of_words_from_cmd_) {
         m.load_bag_of_words(a.bag_of_words_);
     }
 
