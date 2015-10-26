@@ -47,13 +47,18 @@ int main(int argc, char *argv[]) {
         m.load_bag_of_words(std::vector<std::string> {"he", "hel", "hi"});
         auto vec1 = m.match_keywords("http://hello.com");
 
-        m.load_bag_of_words("dataset/vocab.nytimes.txt");
+        if (!m.load_bag_of_words("dataset/vocab.nytimes.txt")) {
+            return -1;
+        }
+
         auto vec2 = m.match_keywords("http://hello.com");
     } else if (!a.url_.empty()) {
         keyword_matcher m;
 
         if (!a.bag_of_words_path_.empty()) {
-            m.load_bag_of_words(a.bag_of_words_path_);
+            if (!m.load_bag_of_words(a.bag_of_words_path_)) {
+                return -1;
+            }
         } else if (!a.bag_of_words_.empty()) {
             m.load_bag_of_words(a.bag_of_words_);
         }
