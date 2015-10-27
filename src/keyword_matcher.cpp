@@ -66,7 +66,8 @@ std::vector<uint16_t> keyword_matcher::match_keywords(const std::string &url) {
             index = 0;
 
             key_exists = trie_.exists_key_store_iter(url.begin() + start + offset, url.begin() + start + len, index);
-            // key found + key is a terminal, the index represents the index within the bag of words vector, storing all keywords
+            // key found + key is a terminal, the index represents the index within the bag of words vector, which stores 
+            // all keywords
             if (key_exists && index != -1) {
                 output_[index] = 1;
             }
