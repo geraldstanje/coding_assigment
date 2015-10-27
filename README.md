@@ -96,4 +96,4 @@ $ python compile_and_test.py
   * compress the trie by implementing a Suffix Trie
   * yet another idea could be to implement a Ternary Search Tree: http://c.learncodethehardway.org/book/ex47.html
   * add more testing
-  * code profiling, to to further improve the performance of the code
+  * code profiling, in order to further improve the performance of the code
