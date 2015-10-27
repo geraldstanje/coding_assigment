@@ -22,17 +22,21 @@ class argument_parser {
                 url_ = allArgs[i];
             } else if (allArgs[i-1] == "-f") {
                 bag_of_words_path_ = allArgs[i];
-                bag_of_words_from_file_ = true;
+                if (!bag_of_words_path_.empty()) {
+                    bag_of_words_from_file_ = true;
+                }
             } else if (allArgs[i-1] == "-s") {
                 split(allArgs[i].begin(), allArgs[i].end(), bag_of_words_);
-                bag_of_words_from_cmd_ = true;
+                if (!bag_of_words_.empty()) {
+                    bag_of_words_from_cmd_ = true;
+                }
             }
         }
     }
     bool parse_success() {
         if (url_.empty()) {
             return false;
-        } else if (bag_of_words_path_.empty() && bag_of_words_.empty()) {
+        } else if (!bag_of_words_from_file_ && !bag_of_words_from_cmd_) {
             return false;
         }
         return true;
