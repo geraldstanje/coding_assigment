@@ -77,7 +77,9 @@ std::vector<uint16_t> keyword_matcher::match_keywords(const std::string &url) {
                 break;
             }
 
-            offset = len; // offset will be set the len of the prev search was successful, reason: the trie a pointer to avoid lookup from the root
+            // the offset will be set the len of the prev search was successful, reason: the trie a pointer to
+            // avoid lookup from the root
+            offset = len;
         }
     }
 
