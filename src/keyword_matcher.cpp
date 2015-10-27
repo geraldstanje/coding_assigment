@@ -66,10 +66,12 @@ std::vector<uint16_t> keyword_matcher::match_keywords(const std::string &url) {
             index = 0;
 
             key_exists = trie_.exists_key_store_iter(url.begin() + start + offset, url.begin() + start + len, index);
+            // key found + key is a terminal
             if (key_exists && index != -1) {
                 output_[index] = 1;
             }
 
+            // no key found
             if (!key_exists) {
                 break;
             }
